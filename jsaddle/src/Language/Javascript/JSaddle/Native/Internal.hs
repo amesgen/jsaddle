@@ -153,7 +153,7 @@ newAsyncCallback f = do
 
 newSyncCallback :: JSCallAsFunction -> JSM Object
 newSyncCallback f = do
-    object <- Object <$> sendLazyCommand NewSyncCallback
+    object <- Object <$> sendLazyCommand NewAsyncCallback
     add <- addCallback <$> askJSM
     liftIO $ add object f
     return object

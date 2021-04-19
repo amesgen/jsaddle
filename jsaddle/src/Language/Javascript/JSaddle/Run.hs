@@ -113,7 +113,7 @@ waitForAnimationFrame = do
     -- We can't get the timestamp from requestAnimationFrame so this will have to do
     start <- startTime <$> JSM ask
     now <- liftIO getCurrentTime
-    void $ sendLazyCommand SyncWithAnimationFrame
+    -- void $ sendLazyCommand SyncWithAnimationFrame
     return $ realToFrac (diffUTCTime now start)
 #endif
 
