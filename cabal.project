@@ -1,10 +1,23 @@
 packages:
  jsaddle/
- jsaddle-warp/
- jsaddle-wkwebview/
- jsaddle-webkit2gtk/
- jsaddle-clib/
 
 constraints: haskell-gi-overloading == 0.0
 
 allow-newer: websockets:random, splitmix:time, *:time, *:unix, *:process, stm:base
+
+allow-newer: base, ghc-prim, template-haskell, jsaddle:*
+index-state:
+  , hackage.haskell.org 2023-01-18T00:38:50Z
+  , head.hackage 2023-01-30T17:20:27Z
+constraints:
+  base installed,
+  ghc installed,
+  ghc-bignum installed,
+  ghc-prim installed,
+  integer-gmp installed,
+  template-haskell installed,
+  unix installed
+source-repository-package
+  type: git
+  location: https://github.com/ekmett/lens
+  tag: 71683b0576af707202faf66e08988b8e46666e38
